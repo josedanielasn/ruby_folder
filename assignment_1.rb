@@ -16,7 +16,7 @@ sum_all()
 
 
 def sort_all()
-  values = [700, 44, 10, 1, -4, 0,1001, 88]
+  values = [700, 44, 10, 1, -4, 0,44,1001, 88]
   new_values = []
   while values.length > 0
     values.each do |i|
@@ -28,7 +28,7 @@ def sort_all()
               end 
             end
         end
-      new_values.push(y)
+      values.count(y).times {new_values.push(y)}
       values.delete(y)
     end
   end
