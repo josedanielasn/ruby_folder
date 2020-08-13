@@ -19,21 +19,19 @@ def sort_all()
   values = [700, 44, 10, 1, -4, 0,1001, 88]
   new_values = []
   while values.length > 0
-  values.each do |i|
-    puts "#{i}  ---"
-    y = i
-    values.each do |x|
-      if (i > x) 
-        if (i + x) < (i + y)
-          y = x
-          print "#{x} ==== "
-        end 
-      end
-   end
-   new_values.push(y)
-   values.delete(y)
+    values.each do |i|
+          y = i
+          values.each do |x|
+            if (i > x) 
+              if (i + x) < (i + y)
+                y = x
+              end 
+            end
+        end
+      new_values.push(y)
+      values.delete(y)
+    end
   end
 p new_values
-end
 end
 sort_all()
